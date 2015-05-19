@@ -1,7 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+## makeCacheMatrix take a matrix as argument and return a list of function to get/set matrix value and inversion of the matrix
+## cacheSolve take a matrix as argument calculating inversion of the matrix, then cache and return the inversion of the matrix
 
-## Write a short comment describing this function
+## Usuage:
+## Init: x <- makeCacheMatrix()
+## set value: x$set(y)
+## get value: y <- x$get()
+## set mean value: x$setmean(mean)
+## get mean value: mean <- getmean()
 
 makeCacheMatrix <- function(x = matrix()) {
         I <- NULL
@@ -18,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## First create a cache matrix and then cache the inversion by using cacheSolve(x)
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
